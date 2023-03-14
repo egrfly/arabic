@@ -1,0 +1,18 @@
+.ModeSelector {
+  .ModeSelector__ModeButton {
+    width: 10rem;
+  }
+
+  .ModeSelector__ModeDropdown {
+    --bs-dropdown-padding-y: 0.125rem;
+  }
+
+  .bi-arrow-repeat::before {
+    transform: scale(1.5);
+    transition: transform 0.5s;
+  }
+
+  .bi-arrow-repeat.upside-down::before {
+    transform: scale(1.5) rotate(180deg);
+  }
+}

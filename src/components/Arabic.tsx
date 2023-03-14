@@ -6,7 +6,7 @@ interface ArabicProps {
 }
 
 const Arabic = ({ children }: ArabicProps) => {
-  return <span className="arabic">{children}</span>
+  return <span className="Arabic">{children}</span>
 }
 
 export default Arabic

@@ -1,144 +1,172 @@
 import letter from '../models/letter'
+import alif from '../assets/letters/alif.mp3'
+import ba from '../assets/letters/ba.mp3'
+import ta from '../assets/letters/ta.mp3'
+import tha from '../assets/letters/tha.mp3'
+import jim from '../assets/letters/jim.mp3'
+import hha from '../assets/letters/hha.mp3'
+import kha from '../assets/letters/kha.mp3'
+import dal from '../assets/letters/dal.mp3'
+import dhal from '../assets/letters/dhal.mp3'
+import ra from '../assets/letters/ra.mp3'
+import zay from '../assets/letters/zay.mp3'
+import sin from '../assets/letters/sin.mp3'
+import shin from '../assets/letters/shin.mp3'
+import ssad from '../assets/letters/ssad.mp3'
+import ddad from '../assets/letters/ddad.mp3'
+import tta from '../assets/letters/tta.mp3'
+import zza from '../assets/letters/zza.mp3'
+import ayn from '../assets/letters/ayn.mp3'
+import ghayn from '../assets/letters/ghayn.mp3'
+import fa from '../assets/letters/fa.mp3'
+import qaf from '../assets/letters/qaf.mp3'
+import kaf from '../assets/letters/kaf.mp3'
+import lam from '../assets/letters/lam.mp3'
+import mim from '../assets/letters/mim.mp3'
+import nun from '../assets/letters/nun.mp3'
+import ha from '../assets/letters/ha.mp3'
+import waw from '../assets/letters/waw.mp3'
+import ya from '../assets/letters/ya.mp3'
 
 const alphabet: letter[] = [
   {
     name: 'alif',
-    sound: '',
+    sound: alif,
     symbol: 'ا',
   },
   {
     name: 'bā',
-    sound: '',
+    sound: ba,
     symbol: 'ب',
   },
   {
     name: 'tā',
-    sound: '',
+    sound: ta,
     symbol: 'ت',
   },
   {
     name: 'thā',
-    sound: '',
+    sound: tha,
     symbol: 'ث',
   },
   {
     name: 'jīm',
-    sound: '',
+    sound: jim,
     symbol: 'ج',
   },
   {
     name: 'ḥa',
-    sound: '',
+    sound: hha,
     symbol: 'ح',
   },
   {
     name: 'kha',
-    sound: '',
+    sound: kha,
     symbol: 'خ',
   },
   {
     name: 'dāl',
-    sound: '',
+    sound: dal,
     symbol: 'د',
   },
   {
     name: 'dhāl',
-    sound: '',
+    sound: dhal,
     symbol: 'ذ',
   },
   {
     name: 'rā',
-    sound: '',
+    sound: ra,
     symbol: 'ر',
   },
   {
     name: 'zay',
-    sound: '',
+    sound: zay,
     symbol: 'ز',
   },
   {
     name: 'sīn',
-    sound: '',
+    sound: sin,
     symbol: 'س',
   },
   {
     name: 'shīn',
-    sound: '',
+    sound: shin,
     symbol: 'ش',
   },
   {
     name: 'ṣād',
-    sound: '',
+    sound: ssad,
     symbol: 'ص',
   },
   {
     name: 'ḍād',
-    sound: '',
+    sound: ddad,
     symbol: 'ض',
   },
   {
     name: 'ṭā',
-    sound: '',
+    sound: tta,
     symbol: 'ط',
   },
   {
     name: 'ẓā',
-    sound: '',
+    sound: zza,
     symbol: 'ظ',
   },
   {
     name: 'ayn',
-    sound: '',
+    sound: ayn,
     symbol: 'ع',
   },
   {
     name: 'ghayn',
-    sound: '',
+    sound: ghayn,
     symbol: 'غ',
   },
   {
     name: 'fā',
-    sound: '',
+    sound: fa,
     symbol: 'ف',
   },
   {
     name: 'qāf',
-    sound: '',
+    sound: qaf,
     symbol: 'ق',
   },
   {
     name: 'kāf',
-    sound: '',
+    sound: kaf,
     symbol: 'ﻙ',
   },
   {
     name: 'lām',
-    sound: '',
+    sound: lam,
     symbol: 'ﻝ',
   },
   {
     name: 'mīm',
-    sound: '',
+    sound: mim,
     symbol: 'ﻡ',
   },
   {
     name: 'nūn',
-    sound: '',
+    sound: nun,
     symbol: 'ن',
   },
   {
     name: 'hā',
-    sound: '',
+    sound: ha,
     symbol: 'ه',
   },
   {
     name: 'wāw',
-    sound: '',
+    sound: waw,
     symbol: 'ﻭ',
   },
   {
     name: 'yā',
-    sound: '',
+    sound: ya,
     symbol: 'ي',
   },
 ]
