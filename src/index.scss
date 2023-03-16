@@ -2,10 +2,15 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
+
 html, body, #root {
   height: 100%;
 }
 
 body {
   margin: 0;
+}
+
+.dropdown-menu {
+  --bs-dropdown-padding-y: 0.125rem;
 }

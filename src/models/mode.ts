@@ -1,9 +1,10 @@
 import { ReactNode } from 'react'
 import letter from './letter'
+import word from './word'
 
-interface mode {
+interface mode<T extends letter | word> {
   name: string,
-  selector: (letter: letter) => ReactNode,
+  selector: (letterOrWord: T) => ReactNode,
 }
 
 export default mode

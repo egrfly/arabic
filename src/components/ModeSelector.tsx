@@ -1,18 +1,20 @@
 import React from 'react'
-import modes from '../data/modes'
 import mode from '../models/mode'
+import letter from '../models/letter'
+import word from '../models/word'
 import './ModeSelector.scss'
 
-interface ModeSelectorProps {
-  questionMode: mode,
-  answerMode: mode,
-  setQuestionMode: (mode: mode) => void,
-  setAnswerMode: (mode: mode) => void,
+interface ModeSelectorProps<T extends letter | word> {
+  modes: mode<T>[],
+  questionMode: mode<T>,
+  answerMode: mode<T>,
+  setQuestionMode: (mode: mode<T>) => void,
+  setAnswerMode: (mode: mode<T>) => void,
   reverseQuestionAndAnswerModes: () => void,
   reversedQuestionAndAnswerModes: boolean,
 }
 
-const ModeSelector = ({ questionMode, answerMode, setQuestionMode, setAnswerMode, reverseQuestionAndAnswerModes, reversedQuestionAndAnswerModes }: ModeSelectorProps) => {
+const ModeSelector = <T extends letter | word>({ modes, questionMode, answerMode, setQuestionMode, setAnswerMode, reverseQuestionAndAnswerModes, reversedQuestionAndAnswerModes }: ModeSelectorProps<T>) => {
   return (
     <div className="ModeSelector d-flex flex-column flex-sm-row justify-content-center align-items-center">
       <div className="dropdown d-inline-block m-1">
@@ -22,7 +24,7 @@ const ModeSelector = ({ questionMode, answerMode, setQuestionMode, setAnswerMode
         <ul className="ModeSelector__ModeDropdown dropdown-menu dropdown-menu-dark border-light text-center">
           {
             modes.filter(mode => ![questionMode.name, answerMode.name].includes(mode.name))
-              .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setQuestionMode(option)}>{option.name}</button></li>)
+                 .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setQuestionMode(option)}>{option.name}</button></li>)
           }
         </ul>
       </div>
@@ -36,7 +38,7 @@ const ModeSelector = ({ questionMode, answerMode, setQuestionMode, setAnswerMode
         <ul className="ModeSelector__ModeDropdown dropdown-menu dropdown-menu-dark border-light text-center">
           {
             modes.filter(mode => ![questionMode.name, answerMode.name].includes(mode.name))
-              .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setAnswerMode(option)}>{option.name}</button></li>)
+                 .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setAnswerMode(option)}>{option.name}</button></li>)
           }
         </ul>
       </div>

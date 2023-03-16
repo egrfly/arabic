@@ -28,7 +28,7 @@ import ha from '../assets/letters/ha.mp3'
 import waw from '../assets/letters/waw.mp3'
 import ya from '../assets/letters/ya.mp3'
 
-const alphabet: letter[] = [
+const letters: letter[] = [
   {
     name: 'alif',
     sound: alif,
@@ -171,4 +171,4 @@ const alphabet: letter[] = [
   },
 ]
 
-export default alphabet
+export default letters

@@ -1,29 +1,35 @@
 import React, { useState } from 'react'
 import ModeSelector from './ModeSelector'
 import OptionButton from './OptionButton'
-import modes from '../data/modes'
 import mode from '../models/mode'
 import letter from '../models/letter'
-import { generateNextOptionLetters, generateNextTargetLetter } from '../helpers/letterGenerator'
+import word from '../models/word'
+import { generateNextOptionLettersOrWords, generateNextTargetLetterOrWord } from '../helpers/letterOrWordGenerator'
 
-const AlphabetQuiz = () => {
-  const [questionMode, setQuestionMode] = useState<mode>(modes[0])
-  const [answerMode, setAnswerMode] = useState<mode>(modes[1])
+interface QuizProps<T extends letter | word> {
+  heading: string,
+  availableLettersOrWords: T[],
+  modes: mode<T>[],
+}
 
-  const [targetLetter, setTargetLetter] = useState<letter>()
-  const [optionLetters, setOptionLetters] = useState<letter[]>()
-  const [selectedLetter, setSelectedLetter] = useState<letter>()
+const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes }: QuizProps<T>) => {
+  const [questionMode, setQuestionMode] = useState<mode<T>>(modes[0])
+  const [answerMode, setAnswerMode] = useState<mode<T>>(modes[1])
+
+  const [targetLetterOrWord, setTargetLetterOrWord] = useState<T>()
+  const [optionLettersOrWords, setOptionLettersOrWords] = useState<T[]>()
+  const [selectedLetterOrWord, setSelectedLetterOrWord] = useState<T>()
   const [checkingState, setCheckingState] = useState<boolean>(false)
 
   const [reversedQuestionAndAnswerModes, setReversedQuestionAndAnswerModes] = useState<boolean>(false)
 
   const refreshLetter = () => {
     setCheckingState(false)
-    setSelectedLetter(undefined)
-    const nextTargetLetter = generateNextTargetLetter(targetLetter)
-    const nextOptionLetters = generateNextOptionLetters(nextTargetLetter)
-    setTargetLetter(nextTargetLetter)
-    setOptionLetters(nextOptionLetters)
+    setSelectedLetterOrWord(undefined)
+    const nextTargetLetterOrWord = generateNextTargetLetterOrWord(availableLettersOrWords, targetLetterOrWord)
+    const nextOptionLettersOrWords = generateNextOptionLettersOrWords(availableLettersOrWords, nextTargetLetterOrWord)
+    setTargetLetterOrWord(nextTargetLetterOrWord)
+    setOptionLettersOrWords(nextOptionLettersOrWords)
   }
 
   const reverseQuestionAndAnswerModes = () => {
@@ -35,27 +41,27 @@ const AlphabetQuiz = () => {
 
   return (
     <>
-      <ModeSelector questionMode={questionMode} setQuestionMode={setQuestionMode}
-                    answerMode={answerMode} setAnswerMode={setAnswerMode}
+      <h1 className="mb-4">{heading}</h1>
+      <ModeSelector modes={modes} questionMode={questionMode} answerMode={answerMode}
+                    setQuestionMode={setQuestionMode} setAnswerMode={setAnswerMode}
                     reverseQuestionAndAnswerModes={reverseQuestionAndAnswerModes}
                     reversedQuestionAndAnswerModes={reversedQuestionAndAnswerModes} />
-
       {
-        targetLetter && optionLetters
+        targetLetterOrWord && optionLettersOrWords
           ? <>
               <div className="card w-75 mx-auto my-4 bg-black border border-primary border-2">
                 <div className="card-body p-4 text-center">
-                  <div className="fs-4">{questionMode.selector(targetLetter)}</div>
+                  <div className="fs-4">{questionMode.selector(targetLetterOrWord)}</div>
                   <div className="row">
-                    {optionLetters.map(letter =>
-                      <div className="col-lg-6 col-12 g-3 mt-3" key={letter.name}>
-                        <OptionButton optionLetter={letter}
-                                      targetLetter={targetLetter}
-                                      selectedLetter={selectedLetter}
-                                      setSelectedLetter={setSelectedLetter}
+                    {optionLettersOrWords.map((letterOrWord, index) =>
+                      <div className="col-lg-6 col-12 g-3 mt-3"
+                           key={(letterOrWord as letter).name || (letterOrWord as word).transliteration}>
+                        <OptionButton optionLetterOrWord={letterOrWord}
+                                      targetLetterOrWord={targetLetterOrWord}
+                                      selectedLetterOrWord={selectedLetterOrWord}
+                                      setSelectedLetterOrWord={setSelectedLetterOrWord}
                                       answerMode={answerMode}
-                                      checkingState={checkingState}
-                                      key={letter.name} />
+                                      checkingState={checkingState} />
                       </div>
                     )}
                   </div>
@@ -64,7 +70,7 @@ const AlphabetQuiz = () => {
               {
                 checkingState
                   ? <button className="btn btn-primary mt-2 mb-4" onClick={refreshLetter}>Continue</button>
-                  : <button className="btn btn-primary mt-2 mb-4" onClick={() => setCheckingState(true)} disabled={!selectedLetter}>Check</button>
+                  : <button className="btn btn-primary mt-2 mb-4" onClick={() => setCheckingState(true)} disabled={!selectedLetterOrWord}>Check</button>
               }
             </>
           : <button className="btn btn-primary my-4" onClick={refreshLetter}>Start</button>
@@ -73,4 +79,4 @@ const AlphabetQuiz = () => {
   )
 }
 
-export default AlphabetQuiz
+export default Quiz
