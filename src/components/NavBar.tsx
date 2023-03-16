@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { wordCategories } from '../data/words'
+import { getFormattedPath } from '../helpers/pathGenerator'
 
 const NavBar = () => {
   return (
@@ -17,7 +19,11 @@ const NavBar = () => {
             <li className="nav-item dropdown">
               <a className="nav-link link-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Words</a>
               <ul className="dropdown-menu dropdown-menu-dark">
-                <li><NavLink to="/words/interjections" className={({ isActive }) => `dropdown-item ${isActive ? 'active' : ''}`}>Interjections</NavLink></li>
+                {Object.keys(wordCategories).map((category) =>
+                  <li>
+                    <NavLink to={`/words/${getFormattedPath(category)}`} className={({ isActive }) => `dropdown-item ${isActive ? 'active' : ''}`}>{category}</NavLink>
+                  </li>
+                )}
               </ul>
             </li>
           </ul>
