@@ -2,20 +2,20 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-html, body, #root {
-  height: 100%;
-}
-
 html {
+  height: 100%;
   background: $prevDark;
 }
 
 body {
+  display: flex;
+  min-height: 100%;
   margin: 0;
   background: url("./assets/background.jpg") center / cover fixed no-repeat;
 }
 
 #root {
+  width: 100%;
   padding-top: 3rem;
   background: $prevDark;
 }
