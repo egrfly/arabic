@@ -11,6 +11,7 @@
     "deploy": "npm run build && echo 'arabic.emilyflynn.co.uk' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource/roboto-slab": "^4.5.11",
     "@fontsource/scheherazade-new": "^4.5.13",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",

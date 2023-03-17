@@ -1,4 +1,7 @@
+@import "../../node_modules/@fontsource/roboto-slab/index.css";
+
 .HeadingBox {
   max-width: 30.75rem;
   background: #fff8;
+  font-family: "Roboto Slab", var(--bs-font-sans-serif);
 }
