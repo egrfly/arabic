@@ -20,13 +20,9 @@
     <meta name="twitter:image:alt" content="Arabic Logo">
     <title>Arabic</title>
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
-    <script type="text/javascript">
+    <script>
       const url = new URL(window.location)
-      if (url.searchParams.has('pathname')) {
-        const pathname = url.searchParams.get('pathname')
-        url.searchParams.delete('pathname')
-        window.history.replaceState(null, 'Arabic', `${pathname}${url.search ? '?' + url.searchParams : ''}${url.hash}`)
-      }
+      window.location.replace(`${url.origin}/?pathname=${url.pathname}${url.search ? '&' + url.searchParams : ''}${url.hash}`)
     </script>
   </head>
   <body>
