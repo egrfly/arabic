@@ -2,15 +2,24 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-
 html, body, #root {
   height: 100%;
 }
 
+html {
+  background: $prevDark;
+}
+
 body {
   margin: 0;
+  background: url("./assets/background.jpg") center / cover fixed no-repeat;
+}
+
+#root {
+  padding-top: 3rem;
+  background: $prevDark;
 }
 
 .dropdown-menu {
-  --bs-dropdown-padding-y: 0.125rem;
+  overflow: hidden;
 }

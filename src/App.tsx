@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -11,8 +11,14 @@ import letters from './data/letters'
 import './App.scss'
 
 const App = () => {
+  useEffect(() => {
+    const root = document.getElementById('root')
+    root!.style.transition = "background 2.5s"
+    root!.style.backgroundColor = '#343a4044'
+  }, [])
+
   return (
-    <main className="App mt-5 px-4 py-5 bg-dark text-light text-center">
+    <main className="App px-4 py-5 text-center">
       <Router>
         <NavBar />
         <Routes>
@@ -22,6 +28,7 @@ const App = () => {
                                 availableLettersOrWords={letters} modes={letterModes} />} />
           {
             Object.keys(wordCategories).map((category) => <Route path={`/words/${getFormattedPath(category)}`}
+                                                                 key={category}
                                                                  element={<Quiz key={category} heading={category}
                                                                                 availableLettersOrWords={wordCategories[category]}
                                                                                 modes={wordModes} />}/>)

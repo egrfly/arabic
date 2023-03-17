@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import HeadingBox from './HeadingBox'
 import ModeSelector from './ModeSelector'
 import OptionButton from './OptionButton'
 import mode from '../models/mode'
 import letter from '../models/letter'
 import word from '../models/word'
 import { generateNextOptionLettersOrWords, generateNextTargetLetterOrWord } from '../helpers/letterOrWordGenerator'
+import './Quiz.scss'
 
 interface QuizProps<T extends letter | word> {
   heading: string,
@@ -40,8 +42,8 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
   }
 
   return (
-    <>
-      <h1 className="mb-4">{heading}</h1>
+    <div className="Quiz">
+      <HeadingBox heading={heading} />
       <ModeSelector modes={modes} questionMode={questionMode} answerMode={answerMode}
                     setQuestionMode={setQuestionMode} setAnswerMode={setAnswerMode}
                     reverseQuestionAndAnswerModes={reverseQuestionAndAnswerModes}
@@ -49,13 +51,12 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
       {
         targetLetterOrWord && optionLettersOrWords
           ? <>
-              <div className="card w-75 mx-auto my-4 bg-black border border-primary border-2">
+              <div className="Quiz__Card card w-75 mx-auto my-4 border-0 text-light">
                 <div className="card-body p-4 text-center">
                   <div className="fs-4">{questionMode.selector(targetLetterOrWord)}</div>
                   <div className="row">
                     {optionLettersOrWords.map((letterOrWord, index) =>
-                      <div className="col-lg-6 col-12 g-3 mt-3"
-                           key={(letterOrWord as letter).name || (letterOrWord as word).transliteration}>
+                      <div className="col-lg-6 col-12 g-3 mt-3" key={index}>
                         <OptionButton optionLetterOrWord={letterOrWord}
                                       targetLetterOrWord={targetLetterOrWord}
                                       selectedLetterOrWord={selectedLetterOrWord}
@@ -75,7 +76,7 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
             </>
           : <button className="btn btn-primary my-4" onClick={refreshLetter}>Start</button>
       }
-    </>
+    </div>
   )
 }
 

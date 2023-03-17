@@ -1,0 +1,12 @@
+@import "../variables";
+
+.Home {
+  .Home__ParagraphBox {
+    max-width: 30.75rem;
+
+    .Home__Paragraph {
+      padding: 0.375rem;
+      background: $dark;
+    }
+  }
+}

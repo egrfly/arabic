@@ -1,18 +1,25 @@
+@import "../variables";
+
 .ModeSelector {
   .ModeSelector__ModeButton {
-    width: 12rem;
+    width: 13.5rem;
   }
 
   .ModeSelector__ModeDropdown {
-    width: 12rem;
+    width: 13.5rem;
+    background: $dark;
   }
 
-  .bi-arrow-repeat::before {
+  .ModeSelector__ReverseButton {
+    width: 2.75rem;
+  }
+
+  .ModeSelector__ReverseButtonIcon::before {
     transform: scale(1.5);
     transition: transform 0.5s;
   }
 
-  .bi-arrow-repeat.upside-down::before {
+  .ModeSelector__ReverseButtonIcon.ModeSelector__ReverseButtonIcon--UpsideDown::before {
     transform: scale(1.5) rotate(180deg);
   }
 }

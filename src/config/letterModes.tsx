@@ -9,8 +9,20 @@ const letterModes: mode<letter>[] = [
     selector: (letter: letter) => letter.name,
   },
   {
-    name: 'Letter symbol',
-    selector: (letter: letter) => <Arabic>{letter.symbol}</Arabic>,
+    name: 'Letter symbol (isolated)',
+    selector: (letter: letter) => <Arabic>{letter.isolated}</Arabic>,
+  },
+  {
+    name: 'Letter symbol (initial)',
+    selector: (letter: letter) => <Arabic>{letter.initial}</Arabic>,
+  },
+  {
+    name: 'Letter symbol (medial)',
+    selector: (letter: letter) => <Arabic>{letter.medial}</Arabic>,
+  },
+  {
+    name: 'Letter symbol (final)',
+    selector: (letter: letter) => <Arabic>{letter.final}</Arabic>,
   },
   {
     name: 'Letter sound',

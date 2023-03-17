@@ -1,7 +1,10 @@
 interface letter {
   name: string,
   sound: string,
-  symbol: string,
+  isolated: string,
+  initial: string,
+  medial: string,
+  final: string,
 }
 
 export default letter
