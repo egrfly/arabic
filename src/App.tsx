@@ -5,7 +5,7 @@ import Home from './components/Home'
 import Quiz from './components/Quiz'
 import letterModes from './config/letterModes'
 import wordModes from './config/wordModes'
-import { wordCategories } from './data/words'
+import { wordCategoryGroups } from './data/words'
 import { getFormattedPath } from './helpers/pathGenerator'
 import letters from './data/letters'
 import './App.scss'
@@ -27,11 +27,15 @@ const App = () => {
                  element={<Quiz key="Arabic Abjad (Alphabet)" heading="Arabic Abjad (Alphabet)"
                                 availableLettersOrWords={letters} modes={letterModes} />} />
           {
-            Object.keys(wordCategories).map((category) => <Route path={`/words/${getFormattedPath(category)}`}
-                                                                 key={category}
-                                                                 element={<Quiz key={category} heading={category}
-                                                                                availableLettersOrWords={wordCategories[category]}
-                                                                                modes={wordModes} />}/>)
+            wordCategoryGroups.map((categoryGroup) =>
+              Object.keys(categoryGroup).map((category) =>
+                <Route path={`/words/${getFormattedPath(category)}`}
+                       key={category}
+                       element={<Quiz key={category} heading={category}
+                                      availableLettersOrWords={categoryGroup[category]}
+                                      modes={wordModes} />}/>
+              )
+            )
           }
         </Routes>
       </Router>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { wordCategories } from '../data/words'
+import { wordCategoryGroups } from '../data/words'
 import { getFormattedPath } from '../helpers/pathGenerator'
 import './NavBar.scss'
 
@@ -20,11 +20,20 @@ const NavBar = () => {
             <li className="nav-item dropdown">
               <a className="nav-link link-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Words</a>
               <ul className="NavBar__Dropdown dropdown-menu dropdown-menu-dark p-0">
-                {Object.keys(wordCategories).map((category) =>
-                  <li key={category}>
-                    <Link to={`/words/${getFormattedPath(category)}`} className="dropdown-item">{category}</Link>
-                  </li>
-                )}
+                {
+                  wordCategoryGroups.map((categoryGroup, index) =>
+                    <React.Fragment key={index}>
+                      {index > 0 && <hr className="dropdown-divider border-primary m-1" />}
+                      {
+                        Object.keys(categoryGroup).map((category) =>
+                          <li key={category}>
+                            <Link to={`/words/${getFormattedPath(category)}`} className="dropdown-item">{category}</Link>
+                          </li>
+                        )
+                      }
+                    </React.Fragment>
+                  )
+                }
               </ul>
             </li>
           </ul>

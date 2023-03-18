@@ -55,16 +55,18 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
                 <div className="card-body p-4 text-center">
                   <div className="fs-4">{questionMode.selector(targetLetterOrWord)}</div>
                   <div className="row">
-                    {optionLettersOrWords.map((letterOrWord, index) =>
-                      <div className="col-lg-6 col-12 g-3 mt-3" key={index}>
-                        <OptionButton optionLetterOrWord={letterOrWord}
-                                      targetLetterOrWord={targetLetterOrWord}
-                                      selectedLetterOrWord={selectedLetterOrWord}
-                                      setSelectedLetterOrWord={setSelectedLetterOrWord}
-                                      answerMode={answerMode}
-                                      checkingState={checkingState} />
-                      </div>
-                    )}
+                    {
+                      optionLettersOrWords.map((letterOrWord, index) =>
+                        <div className="col-lg-6 col-12 g-3 mt-3" key={index}>
+                          <OptionButton optionLetterOrWord={letterOrWord}
+                                        targetLetterOrWord={targetLetterOrWord}
+                                        selectedLetterOrWord={selectedLetterOrWord}
+                                        setSelectedLetterOrWord={setSelectedLetterOrWord}
+                                        answerMode={answerMode}
+                                        checkingState={checkingState} />
+                        </div>
+                      )
+                    }
                   </div>
                 </div>
               </div>

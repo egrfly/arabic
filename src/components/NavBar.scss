@@ -4,6 +4,8 @@
   background: $dark;
 
   .NavBar__Dropdown {
+    max-height: calc(100vh - 4rem);
     background: $dark;
+    overflow-y: auto;
   }
 }

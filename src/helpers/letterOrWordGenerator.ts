@@ -14,11 +14,14 @@ export const generateNextOptionLettersOrWords = <T extends letter | word>(availa
   let decoyOptionLetterOrWord: T
   while (nextOptionLettersOrWords.length < 4) {
     decoyOptionLetterOrWord = availableLettersOrWords[Math.floor(availableLettersOrWords.length * Math.random())]
-    if (!nextOptionLettersOrWords.includes(decoyOptionLetterOrWord)) {
+    const alreadyPresent = nextOptionLettersOrWords.includes(decoyOptionLetterOrWord)
+    const wordWithSameMeaningAlreadyPresent = (decoyOptionLetterOrWord as word).meaning && nextOptionLettersOrWords.filter((letterOrWord) =>
+      (letterOrWord as word).meaning === (decoyOptionLetterOrWord as word).meaning).length > 0
+    if (!alreadyPresent && !wordWithSameMeaningAlreadyPresent) {
       nextOptionLettersOrWords.push(decoyOptionLetterOrWord)
     }
   }
-  return nextOptionLettersOrWords.map(letter => ({ letter, sortingKey: Math.random() }))
+  return nextOptionLettersOrWords.map((letter) => ({ letter, sortingKey: Math.random() }))
     .sort((letter1, letter2) => letter1.sortingKey - letter2.sortingKey)
     .map(({ letter }) => letter)
 }

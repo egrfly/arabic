@@ -23,8 +23,8 @@ const ModeSelector = <T extends letter | word>({ modes, questionMode, answerMode
         </button>
         <ul className="ModeSelector__ModeDropdown dropdown-menu dropdown-menu-dark p-0 text-center">
           {
-            modes.filter(mode => ![questionMode.name, answerMode.name].includes(mode.name))
-                 .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setQuestionMode(option)}>{option.name}</button></li>)
+            modes.filter((mode) => ![questionMode.name, answerMode.name].includes(mode.name))
+                 .map((option) => <li key={option.name}><button className="dropdown-item" onClick={() => setQuestionMode(option)}>{option.name}</button></li>)
           }
         </ul>
       </div>
@@ -37,8 +37,8 @@ const ModeSelector = <T extends letter | word>({ modes, questionMode, answerMode
         </button>
         <ul className="ModeSelector__ModeDropdown dropdown-menu dropdown-menu-dark p-0 text-center">
           {
-            modes.filter(mode => ![questionMode.name, answerMode.name].includes(mode.name))
-                 .map(option => <li key={option.name}><button className="dropdown-item" onClick={() => setAnswerMode(option)}>{option.name}</button></li>)
+            modes.filter((mode) => ![questionMode.name, answerMode.name].includes(mode.name))
+                 .map((option) => <li key={option.name}><button className="dropdown-item" onClick={() => setAnswerMode(option)}>{option.name}</button></li>)
           }
         </ul>
       </div>
