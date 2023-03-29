@@ -14,7 +14,8 @@ const wordModes: mode<word>[] = [
   },
   {
     name: 'Word sound',
-    selector: (word: word) => <audio src={word.sound} controls className="align-middle mw-100 pe-auto" />,
+    selector: (word: word) => <audio src={word.sound} controls className="align-middle mw-100 pe-auto"
+                                     onPlay={(event) => (event.target as HTMLAudioElement).parentElement?.click()} />,
   },
   {
     name: 'Word meaning',

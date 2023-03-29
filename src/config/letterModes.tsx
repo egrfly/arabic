@@ -26,7 +26,8 @@ const letterModes: mode<letter>[] = [
   },
   {
     name: 'Letter sound',
-    selector: (letter: letter) => <audio src={letter.sound} controls className="align-middle mw-100 pe-auto" />,
+    selector: (letter: letter) => <audio src={letter.sound} controls className="align-middle mw-100 pe-auto"
+                                         onPlay={(event) => (event.target as HTMLAudioElement).parentElement?.click()} />,
   },
 ]
 

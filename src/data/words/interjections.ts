@@ -1,6 +1,7 @@
 import word from '../../models/word'
 import marhaba from '../../assets/words/interjections/marhaba.mp3'
 import alsalamEalaykum from '../../assets/words/interjections/alsalamEalaykum.mp3'
+import salam from '../../assets/words/interjections/salam.mp3'
 import lawSamaht from '../../assets/words/interjections/lawSamaht.mp3'
 import shukran from '../../assets/words/interjections/shukran.mp3'
 import asf from '../../assets/words/interjections/asf.mp3'
@@ -22,8 +23,14 @@ const interjections: word[] = [
     meaning: 'peace be upon you',
   },
   {
+    spelling: 'سلام',
+    transliteration: 'salam',
+    sound: salam,
+    meaning: 'peace',
+  },
+  {
     spelling: 'لو سمحت',
-    transliteration: 'law samaht',
+    transliteration: 'law samaht(i)',
     sound: lawSamaht,
     meaning: 'please',
   },
@@ -35,7 +42,7 @@ const interjections: word[] = [
   },
   {
     spelling: 'آسف',
-    transliteration: 'asf',
+    transliteration: 'asf(a)',
     sound: asf,
     meaning: 'sorry',
   },

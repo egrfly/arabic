@@ -2,6 +2,7 @@ import React from 'react'
 import mode from '../models/mode'
 import letter from '../models/letter'
 import word from '../models/word'
+import './OptionButton.scss'
 
 interface OptionButtonProps<T extends letter | word> {
   optionLetterOrWord: T,
@@ -25,15 +26,7 @@ const OptionButton = <T extends letter | word>({ optionLetterOrWord, targetLette
     }
   }
 
-  const getClickabilityClass = (checkingState: boolean) => {
-    if (checkingState) {
-      return 'pe-none'
-    } else {
-      return ''
-    }
-  }
-
-  return <button className={`btn w-100 p-3 fs-5 ${getCorrectnessClass(optionLetterOrWord)} ${getClickabilityClass(checkingState)}`}
+  return <button className={`OptionButton btn w-100 p-3 fs-5 ${getCorrectnessClass(optionLetterOrWord)}`} disabled={checkingState}
                  onClick={() => setSelectedLetterOrWord(optionLetterOrWord)}>{answerMode.selector(optionLetterOrWord)}</button>
 }
 

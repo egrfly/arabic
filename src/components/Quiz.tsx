@@ -25,7 +25,7 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
 
   const [reversedQuestionAndAnswerModes, setReversedQuestionAndAnswerModes] = useState<boolean>(false)
 
-  const refreshLetter = () => {
+  const refreshLetterOrWord = () => {
     setCheckingState(false)
     setSelectedLetterOrWord(undefined)
     const nextTargetLetterOrWord = generateNextTargetLetterOrWord(availableLettersOrWords, targetLetterOrWord)
@@ -72,11 +72,11 @@ const Quiz = <T extends letter | word>({ heading, availableLettersOrWords, modes
               </div>
               {
                 checkingState
-                  ? <button className="btn btn-primary mt-2 mb-4" onClick={refreshLetter}>Continue</button>
+                  ? <button className="btn btn-primary mt-2 mb-4" onClick={refreshLetterOrWord}>Continue</button>
                   : <button className="btn btn-primary mt-2 mb-4" onClick={() => setCheckingState(true)} disabled={!selectedLetterOrWord}>Check</button>
               }
             </>
-          : <button className="btn btn-primary my-4" onClick={refreshLetter}>Start</button>
+          : <button className="btn btn-primary my-4" onClick={refreshLetterOrWord}>Start</button>
       }
     </div>
   )

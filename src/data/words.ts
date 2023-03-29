@@ -1,5 +1,6 @@
 import word from '../models/word'
 import interjections from './words/interjections'
+import prepositions from './words/prepositions'
 import commonVerbs from './words/commonVerbs'
 import miscellaneousVerbs from './words/miscellaneousVerbs'
 import foodAndDrink from './words/foodAndDrink'
@@ -16,6 +17,7 @@ import languages from './words/languages'
 export const wordCategoryGroups: { [category: string]: word[] }[] = [
   {
     'Interjections': interjections,
+    'Prepositions': prepositions,
   },
   {
     'Common Verbs': commonVerbs,

@@ -1,0 +1,5 @@
+.OptionButton {
+  &.btn:disabled {
+    --bs-btn-disabled-opacity: 1;
+  }
+}
