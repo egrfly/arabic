@@ -3,6 +3,7 @@ import interjections from './words/interjections'
 import prepositions from './words/prepositions'
 import commonVerbs from './words/commonVerbs'
 import miscellaneousVerbs from './words/miscellaneousVerbs'
+import miscellaneousVerbs2 from './words/miscellaneousVerbs2'
 import foodAndDrink from './words/foodAndDrink'
 import furniture from './words/furniture'
 import handheldItems from './words/handheldItems'
@@ -23,6 +24,7 @@ export const wordCategoryGroups: { [category: string]: word[] }[] = [
   {
     'Common Verbs': commonVerbs,
     'Miscellaneous Verbs': miscellaneousVerbs,
+    'Miscellaneous Verbs 2': miscellaneousVerbs2,
   },
   {
     'Food and Drink': foodAndDrink,

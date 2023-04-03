@@ -14,6 +14,7 @@ import fursa from '../../assets/words/intangibleNouns/fursa.mp3'
 import raqs from '../../assets/words/intangibleNouns/raqs.mp3'
 import alam from '../../assets/words/intangibleNouns/alam.mp3'
 import wajae from '../../assets/words/intangibleNouns/wajae.mp3'
+import asm from '../../assets/words/intangibleNouns/asm.mp3'
 
 const intangibleNouns: word[] = [
   {
@@ -105,6 +106,12 @@ const intangibleNouns: word[] = [
     transliteration: 'wajae',
     sound: wajae,
     meaning: 'pain',
+  },
+  {
+    spelling: 'اسم',
+    transliteration: 'asm',
+    sound: asm,
+    meaning: 'name',
   },
 ]
 
