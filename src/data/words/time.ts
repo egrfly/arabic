@@ -10,6 +10,8 @@ import yawm from '../../assets/words/time/yawm.mp3'
 import usbue from '../../assets/words/time/usbue.mp3'
 import shahr from '../../assets/words/time/shahr.mp3'
 import sana from '../../assets/words/time/sana.mp3'
+import sabah from '../../assets/words/time/sabah.mp3'
+import masa from '../../assets/words/time/masa.mp3'
 
 const time: word[] = [
   {
@@ -77,6 +79,18 @@ const time: word[] = [
     transliteration: 'sana',
     sound: sana,
     meaning: 'year',
+  },
+  {
+    spelling: 'صباح',
+    transliteration: 'sabah',
+    sound: sabah,
+    meaning: 'morning',
+  },
+  {
+    spelling: 'مساء',
+    transliteration: 'sabah',
+    sound: masa,
+    meaning: 'morning',
   },
 ]
 

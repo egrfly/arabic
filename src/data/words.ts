@@ -8,6 +8,7 @@ import furniture from './words/furniture'
 import handheldItems from './words/handheldItems'
 import generalPlaces from './words/generalPlaces'
 import transportation from './words/transportation'
+import animals from './words/animals'
 import time from './words/time'
 import numbers from './words/numbers'
 import intangibleNouns from './words/intangibleNouns'
@@ -29,6 +30,7 @@ export const wordCategoryGroups: { [category: string]: word[] }[] = [
     'Handheld Items': handheldItems,
     'General Places': generalPlaces,
     'Transportation': transportation,
+    'Animals': animals,
     'Time': time,
     'Numbers': numbers,
     'Intangible Nouns': intangibleNouns,
