@@ -1,9 +1,12 @@
 import word from '../../models/word'
 import euman from '../../assets/words/specificPlaces/euman.mp3'
 import misr from '../../assets/words/specificPlaces/misr.mp3'
+import almaghrib from '../../assets/words/specificPlaces/almaghrib.mp3'
 import alkhalij from '../../assets/words/specificPlaces/alkhalij.mp3'
 import alsharq from '../../assets/words/specificPlaces/alsharq.mp3'
+import algharb from '../../assets/words/specificPlaces/algharb.mp3'
 import biritania from '../../assets/words/specificPlaces/biritania.mp3'
+import inkiltira from '../../assets/words/specificPlaces/inkiltira.mp3'
 import landan from '../../assets/words/specificPlaces/landan.mp3'
 import faransa from '../../assets/words/specificPlaces/faransa.mp3'
 import baris from '../../assets/words/specificPlaces/baris.mp3'
@@ -29,6 +32,12 @@ const specificPlaces: word[] = [
     meaning: 'Egypt',
   },
   {
+    spelling: 'المغرب',
+    transliteration: 'almaghrib',
+    sound: almaghrib,
+    meaning: 'Morocco',
+  },
+  {
     spelling: 'الخليج',
     transliteration: 'alkhalij',
     sound: alkhalij,
@@ -41,10 +50,22 @@ const specificPlaces: word[] = [
     meaning: 'the Levant',
   },
   {
+    spelling: 'الغرب',
+    transliteration: 'algharb',
+    sound: algharb,
+    meaning: 'the West',
+  },
+  {
     spelling: 'بريطانيا',
     transliteration: 'biritania',
     sound: biritania,
     meaning: 'Britain',
+  },
+  {
+    spelling: 'إنكلترا',
+    transliteration: 'inkiltira',
+    sound: inkiltira,
+    meaning: 'England',
   },
   {
     spelling: 'لندن',

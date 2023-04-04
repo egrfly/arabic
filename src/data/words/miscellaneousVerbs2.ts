@@ -1,5 +1,6 @@
 import word from '../../models/word'
-import akhrij from '../../assets/words/miscellaneousVerbs2/akhrij.mp3'
+import atruk from '../../assets/words/miscellaneousVerbs2/atruk.mp3'
+import akhruj from '../../assets/words/miscellaneousVerbs2/akhruj.mp3'
 import adkhul from '../../assets/words/miscellaneousVerbs2/adkhul.mp3'
 import asrukh from '../../assets/words/miscellaneousVerbs2/asrukh.mp3'
 import ashkur from '../../assets/words/miscellaneousVerbs2/ashkur.mp3'
@@ -9,13 +10,24 @@ import anzil from '../../assets/words/miscellaneousVerbs2/anzil.mp3'
 import aghsal from '../../assets/words/miscellaneousVerbs2/aghsal.mp3'
 import adhak from '../../assets/words/miscellaneousVerbs2/adhak.mp3'
 import ahjuz from '../../assets/words/miscellaneousVerbs2/ahjuz.mp3'
+import ashaghil from '../../assets/words/miscellaneousVerbs2/ashaghil.mp3'
+import ashtaghil from '../../assets/words/miscellaneousVerbs2/ashtaghil.mp3'
+import asafir from '../../assets/words/miscellaneousVerbs2/asafir.mp3'
+import adrib from '../../assets/words/miscellaneousVerbs2/adrib.mp3'
+import aqul from '../../assets/words/miscellaneousVerbs2/aqul.mp3'
 
 const miscellaneousVerbs2: word[] = [
   {
-    spelling: 'أخرج',
-    transliteration: 'akhrij',
-    sound: akhrij,
+    spelling: 'أترك',
+    transliteration: 'atruk',
+    sound: atruk,
     meaning: 'I leave',
+  },
+  {
+    spelling: 'أخرج',
+    transliteration: 'akhruj',
+    sound: akhruj,
+    meaning: 'I take out',
   },
   {
     spelling: 'أدخل',
@@ -70,6 +82,36 @@ const miscellaneousVerbs2: word[] = [
     transliteration: 'ahjuz',
     sound: ahjuz,
     meaning: 'I book',
+  },
+  {
+    spelling: 'أشغل',
+    transliteration: 'ashaghil',
+    sound: ashaghil,
+    meaning: 'I turn on',
+  },
+  {
+    spelling: 'أشتغل',
+    transliteration: 'ashtaghil',
+    sound: ashtaghil,
+    meaning: 'I work',
+  },
+  {
+    spelling: 'أسافر',
+    transliteration: 'asafir',
+    sound: asafir,
+    meaning: 'I travel',
+  },
+  {
+    spelling: 'أضرب',
+    transliteration: 'adrib',
+    sound: adrib,
+    meaning: 'I hit',
+  },
+  {
+    spelling: 'اقول',
+    transliteration: 'aqul',
+    sound: aqul,
+    meaning: 'I say',
   },
 ]
 

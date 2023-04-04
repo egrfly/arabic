@@ -88,9 +88,9 @@ const time: word[] = [
   },
   {
     spelling: 'مساء',
-    transliteration: 'sabah',
+    transliteration: 'masa',
     sound: masa,
-    meaning: 'morning',
+    meaning: 'evening',
   },
 ]
 

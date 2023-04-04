@@ -2,7 +2,7 @@ import word from '../../models/word'
 import bayt from '../../assets/words/generalPlaces/bayt.mp3'
 import mateam from '../../assets/words/generalPlaces/mateam.mp3'
 import bank from '../../assets/words/generalPlaces/bank.mp3'
-import mahala from '../../assets/words/generalPlaces/mahala.mp3'
+import mahal from '../../assets/words/generalPlaces/mahal.mp3'
 import mustashfa from '../../assets/words/generalPlaces/mustashfa.mp3'
 import maktaba from '../../assets/words/generalPlaces/maktaba.mp3'
 
@@ -27,8 +27,8 @@ const generalPlaces: word[] = [
   },
   {
     spelling: 'محل',
-    transliteration: 'mahala',
-    sound: mahala,
+    transliteration: 'mahal',
+    sound: mahal,
     meaning: 'shop',
   },
   {
@@ -42,6 +42,42 @@ const generalPlaces: word[] = [
     transliteration: 'maktaba',
     sound: maktaba,
     meaning: 'library',
+  },
+  {
+    spelling: 'مسجد',
+    transliteration: 'masjid',
+    sound: '',
+    meaning: 'mosque',
+  },
+  {
+    spelling: 'شارع',
+    transliteration: 'sharie',
+    sound: '',
+    meaning: 'street',
+  },
+  {
+    spelling: 'سينما',
+    transliteration: 'sinima',
+    sound: '',
+    meaning: 'cinema',
+  },
+  {
+    spelling: 'شركة',
+    transliteration: 'sharika',
+    sound: '',
+    meaning: 'company',
+  },
+  {
+    spelling: 'مدرسة',
+    transliteration: 'madrasa',
+    sound: '',
+    meaning: 'school',
+  },
+  {
+    spelling: 'فندق',
+    transliteration: 'funduq',
+    sound: '',
+    meaning: 'hotel',
   },
 ]
 

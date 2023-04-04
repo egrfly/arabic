@@ -1,17 +1,13 @@
 import word from '../../models/word'
 import hisan from '../../assets/words/animals/hisan.mp3'
+import fahal from '../../assets/words/animals/fahal.mp3'
 import jamal from '../../assets/words/animals/jamal.mp3'
 import zarafa from '../../assets/words/animals/zarafa.mp3'
 import kalb from '../../assets/words/animals/kalb.mp3'
-import buma from '../../assets/words/animals/buma.mp3'
-import thueban from '../../assets/words/animals/thueban.mp3'
-import hut from '../../assets/words/animals/hut.mp3'
-import khinzir from '../../assets/words/animals/khinzir.mp3'
-import duda from '../../assets/words/animals/duda.mp3'
-import dub from '../../assets/words/animals/dub.mp3'
-import qird from '../../assets/words/animals/qird.mp3'
-import dhib from '../../assets/words/animals/dhib.mp3'
-import dhubab from '../../assets/words/animals/dhubab.mp3'
+import namir from '../../assets/words/animals/namir.mp3'
+import nahla from '../../assets/words/animals/nahla.mp3'
+import dhubaba from '../../assets/words/animals/dhubaba.mp3'
+import namla from '../../assets/words/animals/namla.mp3'
 
 const animals: word[] = [
   {
@@ -19,6 +15,12 @@ const animals: word[] = [
     transliteration: 'hisan',
     sound: hisan,
     meaning: 'horse',
+  },
+  {
+    spelling: 'فحل',
+    transliteration: 'fahal',
+    sound: fahal,
+    meaning: 'stallion',
   },
   {
     spelling: 'جمل',
@@ -39,58 +41,28 @@ const animals: word[] = [
     meaning: 'dog',
   },
   {
-    spelling: 'بومة',
-    transliteration: 'buma',
-    sound: buma,
-    meaning: 'owl',
+    spelling: 'نمر',
+    transliteration: 'namir',
+    sound: namir,
+    meaning: 'tiger',
   },
   {
-    spelling: 'ثعبان',
-    transliteration: 'thueban',
-    sound: thueban,
-    meaning: 'snake',
+    spelling: 'نحلة',
+    transliteration: 'nahla',
+    sound: nahla,
+    meaning: 'bee',
   },
   {
-    spelling: 'حوت',
-    transliteration: 'hut',
-    sound: hut,
-    meaning: 'whale',
-  },
-  {
-    spelling: 'خنزير',
-    transliteration: 'khinzir',
-    sound: khinzir,
-    meaning: 'pig',
-  },
-  {
-    spelling: 'دودة',
-    transliteration: 'duda',
-    sound: duda,
-    meaning: 'worm',
-  },
-  {
-    spelling: 'دب',
-    transliteration: 'dub',
-    sound: dub,
-    meaning: 'bear',
-  },
-  {
-    spelling: 'قرد',
-    transliteration: 'qird',
-    sound: qird,
-    meaning: 'monkey',
-  },
-  {
-    spelling: 'ذئب',
-    transliteration: 'dhib',
-    sound: dhib,
-    meaning: 'wolf',
-  },
-  {
-    spelling: 'ذباب',
-    transliteration: 'dhubab',
-    sound: dhubab,
+    spelling: 'ذبابة',
+    transliteration: 'dhubaba',
+    sound: dhubaba,
     meaning: 'fly',
+  },
+  {
+    spelling: 'نملة',
+    transliteration: 'namla',
+    sound: namla,
+    meaning: 'ant',
   },
 ]
 

@@ -8,6 +8,11 @@ import halib from '../../assets/words/foodAndDrink/halib.mp3'
 import easir from '../../assets/words/foodAndDrink/easir.mp3'
 import ma from '../../assets/words/foodAndDrink/ma.mp3'
 import may from '../../assets/words/foodAndDrink/may.mp3'
+import sukar from '../../assets/words/foodAndDrink/sukar.mp3'
+import tufaaha from '../../assets/words/foodAndDrink/tufaaha.mp3'
+import lahm from '../../assets/words/foodAndDrink/lahm.mp3'
+import shukulata from '../../assets/words/foodAndDrink/shukulata.mp3'
+import ruz from '../../assets/words/foodAndDrink/ruz.mp3'
 
 const foodAndDrink: word[] = [
   {
@@ -63,6 +68,36 @@ const foodAndDrink: word[] = [
     transliteration: 'may',
     sound: may,
     meaning: 'water (dialect)',
+  },
+  {
+    spelling: 'سكر',
+    transliteration: 'sukar',
+    sound: sukar,
+    meaning: 'sugar',
+  },
+  {
+    spelling: 'تفاحة',
+    transliteration: 'tufaaha',
+    sound: tufaaha,
+    meaning: 'apple',
+  },
+  {
+    spelling: 'لحم',
+    transliteration: 'lahm',
+    sound: lahm,
+    meaning: 'meat',
+  },
+  {
+    spelling: 'شوكولاتة',
+    transliteration: 'shukulata',
+    sound: shukulata,
+    meaning: 'chocolate',
+  },
+  {
+    spelling: 'رز',
+    transliteration: 'ruz',
+    sound: ruz,
+    meaning: 'rice',
   },
 ]
 

@@ -5,6 +5,8 @@ import tilifizyun from '../../assets/words/furniture/tilifizyun.mp3'
 import kursi from '../../assets/words/furniture/kursi.mp3'
 import tawila from '../../assets/words/furniture/tawila.mp3'
 import kumbiutir from '../../assets/words/furniture/kumbiutir.mp3'
+import radiu from '../../assets/words/furniture/radiu.mp3'
+import sitara from '../../assets/words/furniture/sitara.mp3'
 
 const furniture: word[] = [
   {
@@ -42,6 +44,18 @@ const furniture: word[] = [
     transliteration: 'kumbiutir',
     sound: kumbiutir,
     meaning: 'computer',
+  },
+  {
+    spelling: 'راديو',
+    transliteration: 'radiu',
+    sound: radiu,
+    meaning: 'radio',
+  },
+  {
+    spelling: 'ستارة',
+    transliteration: 'sitara',
+    sound: sitara,
+    meaning: 'curtain',
   },
 ]
 
